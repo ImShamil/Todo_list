@@ -1,3 +1,6 @@
+import './TodoList.css';
+import trashCanImg from '../img/trash_can.svg';
+
 function TodoList({itemsList, setItemsList}){
 
   function ClickOnChange(itemIndex ){
@@ -7,11 +10,12 @@ function TodoList({itemsList, setItemsList}){
    return(
     <ul>
       {itemsList.map((item,index)=>
-      
       <li key={index}>
-        <input type="checkbox"></input>
-        {item}
-        <button type="button" onClick={()=>{ClickOnChange(index)}}> delete</button>
+        <div className="itemBox">
+          <input className='btnChck' type="checkbox"></input>
+          <span>{item}</span>
+          <button className="listBtn" type="button" onClick={()=>{ClickOnChange(index)}}> <img src={trashCanImg} alt="trash_can"/> </button>
+        </div>
       </li>)}
     </ul>
    )

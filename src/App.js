@@ -12,8 +12,8 @@ function App() {
   }
 
   return (
-    <div>
-      <h1> Todo list</h1>
+    <div className='container'>
+      <h1> Мои задачи</h1>
       <AddTodo addItem={addItem}/>
       <TodoList itemsList={itemsList} setItemsList={setItemsList}/>
     </div>  );

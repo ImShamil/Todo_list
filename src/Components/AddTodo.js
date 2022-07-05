@@ -1,3 +1,4 @@
+import './AddTodo.css';
 import React, { useState } from 'react';
 
 function AddTodo({addItem}){
@@ -15,12 +16,16 @@ function AddTodo({addItem}){
         
     }
     return(
-        <form onSubmit={handleOnSubmit} >
-        <input type="text" 
-          placeholder="What will you do?" 
-          onChange={hadleOnChange} 
-          value={value}/>
-        <button type="submit">Add</button>
+      <form class ="todoForm"onSubmit={handleOnSubmit} >
+        <div className='formContainer'>
+          <input
+            className="todo todoInp " 
+            type="text" 
+            placeholder="Какие планы?" 
+            onChange={hadleOnChange} 
+            value={value}/>
+          <button className="todo todoBtn" type="submit">Добавить</button>
+        </div>
       </form>
     )
 }

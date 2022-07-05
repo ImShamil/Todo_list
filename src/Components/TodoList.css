@@ -1,0 +1,21 @@
+ul{
+    padding: 0;
+    text-align: left;
+}
+li{ font-size: 25px;
+    height: 50px;
+    list-style-type: none;
+}
+.itemBox{
+    display: flex;
+    align-items: center;
+}
+.btnChck{
+    margin-right: 10px;
+    height: 25px; 
+    width: 25px;
+}
+.listBtn{
+    margin-left: 10px;
+    font-size: 25px;
+}

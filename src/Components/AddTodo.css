@@ -1,0 +1,18 @@
+.todoForm{
+    height: 50px;
+    text-align: left;
+}
+.todo{
+    height: auto;
+    font-size: 25px;
+}
+.formContainer{
+    display: flex;
+    justify-content: space-between;
+}
+.todoInp{
+    width: 300px;
+}
+.todoBtn{
+    width: 130px;
+}

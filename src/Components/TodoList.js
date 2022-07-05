@@ -14,7 +14,11 @@ function TodoList({itemsList, setItemsList}){
         <div className="itemBox">
           <input className='btnChck' type="checkbox"></input>
           <span>{item}</span>
-          <button className="listBtn" type="button" onClick={()=>{ClickOnChange(index)}}> <img src={trashCanImg} alt="trash_can"/> </button>
+          <button 
+          className="listBtn" type="button" 
+          onClick={()=>{ClickOnChange(index)}}> 
+          <img src={trashCanImg} alt="trash_can"/> 
+          </button>
         </div>
       </li>)}
     </ul>

@@ -1,14 +1,12 @@
-function TodoList({toDoList, setToDoList}){
+function TodoList({itemsList, setItemsList}){
 
   function ClickOnChange(itemIndex ){
-    let newToDolist=toDoList.filter((_,index)=>index!==itemIndex);
-    setToDoList(newToDolist);
+    let newItemsList=itemsList.filter((item,index)=>index!==itemIndex);
+    setItemsList(newItemsList);
   }
-  
-
    return(
     <ul>
-      {toDoList.map((item,index)=>
+      {itemsList.map((item,index)=>
       
       <li key={index}>
         <input type="checkbox"></input>

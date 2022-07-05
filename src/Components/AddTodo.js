@@ -7,9 +7,12 @@ function AddTodo({addItem}){
         setValue(e.target.value);
     }
     function handleOnSubmit(e){
+      if(value!==''){
         addItem(value);
-        e.preventDefault();
         setValue('');
+      }
+        e.preventDefault();
+        
     }
     return(
         <form onSubmit={handleOnSubmit} >

@@ -1,8 +1,22 @@
-function TodoList({toDoList}){
-    const listItems = toDoList.map((val, index) =>
-    <li key={index}>{val}</li>
-  );
-  return <ul>{listItems}</ul>;
+function TodoList({toDoList, setToDoList}){
+
+  function ClickOnChange(itemIndex ){
+    let newToDolist=toDoList.filter((_,index)=>index!==itemIndex);
+    setToDoList(newToDolist);
+  }
+  
+
+   return(
+    <ul>
+      {toDoList.map((item,index)=>
+      
+      <li key={index}>
+        <input type="checkbox"></input>
+        {item}
+        <button type="button" onClick={()=>{ClickOnChange(index)}}> delete</button>
+      </li>)}
+    </ul>
+   )
 }
 
 

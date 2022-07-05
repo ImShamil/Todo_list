@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
-function AddTodo({setToDoList}){
+function AddTodo({addItem}){
     const [value, setValue] = useState('');
-
+    
     function hadleOnChange(e){
         setValue(e.target.value);
     }
     function handleOnSubmit(e){
-        setToDoList(value);
+        addItem(value);
         e.preventDefault();
         setValue('');
     }
